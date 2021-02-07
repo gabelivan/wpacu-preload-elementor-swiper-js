@@ -4,7 +4,7 @@ Plugin Name: Asset CleanUp: Preload Elementor's Swiper (.js)
 Plugin URI: https://github.com/gabelivan/wpacu-preload-swiper-js
 Description: This plugin checks if there are Swiper elements in the HTML source and preload swiper.(min).js (to improve "Preload key requests" in PageSpeed Insights). This is recommended to use ONLY when swiper.(min).js is loaded from another JS file and can't be preloaded via Asset CleanUp because it doesn't show in the list of assets to manage
 Author: Gabriel Livan
-Version: 1.0
+Version: 1.1
 Author URI: https://gabelivan.com/
 */
 if ( ! defined('ABSPATH') ) {
