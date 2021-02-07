@@ -31,7 +31,7 @@ add_filter('wpacu_html_source_before_optimization', function($htmlSource) {
 	preg_match_all($verifyRegEx, $htmlSource, $anyMatches);
 
 	// Only continue if, all classes where found, continue
-	if (isset($anyMatches[0]) && count($anyMatches[0]) === count($checkIfClassContains)) {
+	if (isset($anyMatches[0]) && count($anyMatches[0]) >= count($checkIfClassContains)) {
 		// Check if it wasn't already preloaded (e.g. bu another plugin
 		// or perhaps a custom code inserted into function.php from the child theme)
 		$swiperJsUrl = wpacuGetSwiperJsUrl();
