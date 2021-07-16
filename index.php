@@ -26,7 +26,7 @@ add_filter('wpacu_html_source_before_optimization', function($htmlSource) {
 	);
 
 	// This RegEx looks inside a class' content (either within single or double quote) and checks if it has the classes mentioned at $checkIfClassContains
-	$verifyRegEx = '#class=("|\').*('.$containsListRegEx.')(.*?)("|\')(.*?)>#';
+	$verifyRegEx = '#class=("|\')[^"|\']*\b'.$containsListRegEx.'\b[^"|\']*?\1#';
 
 	preg_match_all($verifyRegEx, $htmlSource, $anyMatches);
 
